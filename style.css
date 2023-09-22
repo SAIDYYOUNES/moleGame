@@ -20,6 +20,9 @@
     .custom-cursor {
         cursor: url('./img/cursor.png'), auto;
       }
+    .cursor-worm {
+        cursor: url('./img/cursor-worm.png'), auto;
+      }
     .bg {
       background-repeat: no-repeat;
       width: 1920px;
