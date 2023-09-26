@@ -15,8 +15,7 @@ function moleTransition(rand) {
                 section.classList.remove('cursor-worm')
                 section.classList.add('costum-cursor')
               }, 800);
-            
-        }
+          }
       });
     var images = ["","./img/hungry.png","./img/sad.png", "./img/leaving.png" ,""];
     var currentIndex = 0;
@@ -31,7 +30,7 @@ function moleTransition(rand) {
     }, 1300); 
 }
 function random() {
-    var rand1 = Math.floor(Math.random() * 9) + 0;
+    var rand1 = Math.floor(Math.random() * 10);
      if (current.includes(rand1)) {
         
         random()
@@ -55,8 +54,17 @@ window.addEventListener("beforeunload", function () {
 });
 
 function feedMole(rand){
-// console.log('mnamnam');
 var hole = document.querySelector("#hole-" + rand+" img");
+var worm = document.querySelector("#worm");
+var currentWidth = parseFloat(worm.style.width);
+currentWidth += 5;
+worm.style.width = currentWidth + "%";
+// var worm = document.getElementById("worm");
+if (worm.style.width === "100%") {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+
+}
 
 var images = ["./img/fed.png", "./img/leaving.png" ,""];
 var currentIndex = 0;
@@ -68,4 +76,11 @@ clearInterval(intervalId);
 
     }
 }, 800); 
+}
+
+
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
 }

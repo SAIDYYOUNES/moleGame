@@ -12,8 +12,12 @@
 
 <body>
   <section  id="cursor" class="bg custom-cursor">
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img src="./img/win.png" alt="Modal Image">
+    </div>
     <div class="worm-box">
-      <div style="width: 5%" class="worm-container">
+      <div style="width: 5%;overflow: hidden;max-width: 100%;" id="worm" class="worm-container">
         <img class="worm" src="./img/worm.png" alt="worm meter">
       </div>
     </div>
